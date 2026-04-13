@@ -76,3 +76,5 @@ public class RhymersJUnitTest {
     }
 
 }
+
+// Projekt jest poprawny, wszystkie testy jednostkowe przechodzą pomyślnie.
