@@ -28,6 +28,7 @@ public class DefaultCountingOutRhymer {
      *
      * @param in element do dodania
      */
+    // TODO: dodać obsługę wyjątku dla przepełnienia stosu zamiast cichego ignorowania
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;

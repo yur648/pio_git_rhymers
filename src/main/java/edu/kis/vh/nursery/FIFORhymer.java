@@ -4,6 +4,7 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
+    // TODO: rozważyć optymalizację - obecna implementacja tworzy tymczasowy stos przy każdym countOut
     @Override
     public int countOut() {
         while (!callCheck())
