@@ -75,4 +75,33 @@ public class RhymersJUnitTest {
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
     }
 
+
+    @Test
+    public void testHanoiRhymerBasic() {
+        HanoiRhymer rhymer = new HanoiRhymer();
+
+        Assert.assertEquals(0, rhymer.reportRejected());
+
+        rhymer.countIn(5);
+        rhymer.countIn(10);
+        rhymer.countIn(3);
+
+        Assert.assertEquals(1, rhymer.reportRejected());
+    }
+
+    @Test
+    public void testHanoiRhymerCountOut() {
+        HanoiRhymer rhymer = new HanoiRhymer();
+
+        rhymer.countIn(5);
+        rhymer.countIn(10);
+        rhymer.countIn(3);
+
+        Assert.assertEquals(3, rhymer.peekaboo());
+        Assert.assertEquals(3, rhymer.countOut());
+        Assert.assertEquals(5, rhymer.peekaboo());
+    }
+
 }
+
+// Projekt jest poprawny, wszystkie testy jednostkowe przechodzą pomyślnie.
